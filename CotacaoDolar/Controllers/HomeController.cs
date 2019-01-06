@@ -47,6 +47,10 @@ namespace CotacaoDolar.Controllers
             var service = new WebReference.FachadaWSSGSService();
 
             var cotacao = service.getUltimoValorVO(10813);
+            
+            //Here you can also store cotacao.ultimoValor.svalor in a database
+            //just call your method to store this data and pass the cotacao.ultimoValor.svalor as parameter
+            //e.g. _myApplicationService.StoreDollarQuotation(cotacao.ultimoValor.svalor)
 
             return cotacao.ultimoValor.svalor;
         }
